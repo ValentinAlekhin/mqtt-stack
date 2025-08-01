@@ -66,9 +66,7 @@ services:
   image: valentinalekhin/wb-vue-dashboard:latest
   container_name: wb-vue-dashboard
   ports:
-   - '${WB_VUE_DASHBOARD_PORT:-3000}:3000'
-  environment:
-   - NUXT_PUBLIC_MQTT_BROKER=${NUXT_PUBLIC_MQTT_BROKER}
+   - '${WB_VUE_DASHBOARD_PORT:-3000}:80'
   depends_on:
    - mosquitto
   restart: unless-stopped
